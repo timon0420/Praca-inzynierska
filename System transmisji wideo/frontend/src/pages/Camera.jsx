@@ -1,92 +1,163 @@
-import { useRef, useEffect, useState } from 'react' 
-import { Link } from 'react-router-dom';
-import '../styles/camera.css';
+import { useCallback, useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
+import '../styles/camera.css'
+
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || 'https://websocket-inzynierka.onrender.com').replace(/\/$/, '')
+
+const websocketUrl = (path, token) => {
+    const url = new URL(API_BASE_URL)
+    url.protocol = url.protocol === 'https:' ? 'wss:' : 'ws:'
+    url.pathname = path
+    url.search = new URLSearchParams({ token }).toString()
+    return url.toString()
+}
 
 export const Camera = () => {
+    const videoRef = useRef(null)
+    const canvasRef = useRef(null)
+    const wsRef = useRef(null)
+    const streamRef = useRef(null)
+    const encodingRef = useRef(false)
+    const [stream, setStream] = useState(null)
+    const [error, setError] = useState(null)
+    const [session, setSession] = useState(null)
+    const [connectionStatus, setConnectionStatus] = useState('connecting')
+    const [peers, setPeers] = useState({ python: false, unity: false })
+    const [source, setSource] = useState('')
 
-    const videoRef = useRef(null);
-    const canvasRef = useRef(null);
-    const wsRef = useRef(null);
-    const [stream, setStream] = useState(null);
-    const [error, setError] = useState(null);
-    const [connectionStatus, setConnectionStatus] = useState('connecting');
-
-    const startCamera = async () => {
-        setError(null);
-        try {
-            const mediaStream = await navigator.mediaDevices.getUserMedia({
-                video: {
-                    facingMode: 'envioronment',
-                    width: {ideal: 1280},
-                    height: {ideal: 720}
-                }
-            });
-
-            setStream(mediaStream);
-            if (videoRef.current) {
-                videoRef.current.srcObject = mediaStream;
-            }
-        } catch (err) {
-            alert(err);
-            setError("Camera not available");
+    const stopCamera = useCallback(() => {
+        const activeStream = streamRef.current
+        if (activeStream) {
+            activeStream.getTracks().forEach((track) => track.stop())
         }
-    };
-
-    const stopCamera = () => {
-        if (stream) {
-            stream.getTracks().forEach(track => track.stop());
-            setStream(null);
-            if (videoRef.current) {
-                videoRef.current.srcObejct = null;
-            }
+        streamRef.current = null
+        setStream(null)
+        if (videoRef.current) {
+            videoRef.current.srcObject = null
         }
-    };
-
-    useEffect(() => {
-        const websocket = new WebSocket('ws://localhost:8080/ws');
-        wsRef.current = websocket;
-
-        websocket.onopen = () => {
-            setConnectionStatus('connected');
-            console.log('Connected to server');
-        };
-        websocket.onmessage = (event) => console.log(event.data);
-        websocket.onerror = () => setConnectionStatus('disconnected');
-        websocket.onclose = () => {
-            setConnectionStatus('disconnected');
-            console.log('Disconnected from server');
-        };
-
-        return () => {
-            wsRef.current = null;
-            websocket.close();
-        };
     }, [])
 
     useEffect(() => {
-        if (!stream) return undefined;
+        const controller = new AbortController()
+
+        const createSession = async () => {
+            try {
+                const stored = sessionStorage.getItem('manipulatorSession')
+                if (stored) {
+                    const restoredSession = JSON.parse(stored)
+                    if (restoredSession?.code && restoredSession?.browserToken) {
+                        setSession(restoredSession)
+                        return
+                    }
+                }
+                const response = await fetch(`${API_BASE_URL}/api/sessions`, {
+                    method: 'POST',
+                    signal: controller.signal,
+                })
+                if (!response.ok) throw new Error('Nie udało się utworzyć sesji.')
+                const createdSession = await response.json()
+                sessionStorage.setItem('manipulatorSession', JSON.stringify(createdSession))
+                setSession(createdSession)
+            } catch (requestError) {
+                if (requestError.name !== 'AbortError') {
+                    setConnectionStatus('disconnected')
+                    setError(requestError.message)
+                }
+            }
+        }
+
+        createSession()
+        return () => controller.abort()
+    }, [])
+
+    useEffect(() => {
+        if (!session) return undefined
+
+        const socket = new WebSocket(websocketUrl('/ws/browser', session.browserToken))
+        wsRef.current = socket
+        setConnectionStatus('connecting')
+
+        socket.onopen = () => setConnectionStatus('connected')
+        socket.onmessage = (event) => {
+            if (typeof event.data !== 'string') return
+            try {
+                const message = JSON.parse(event.data)
+                if (message.type === 'status') {
+                    setPeers({ python: Boolean(message.python), unity: Boolean(message.unity) })
+                    setSource(message.source || '')
+                }
+            } catch {
+                setError('Serwer przesłał nieprawidłowy komunikat.')
+            }
+        }
+        socket.onerror = () => setConnectionStatus('disconnected')
+        socket.onclose = () => setConnectionStatus('disconnected')
+
+        return () => {
+            wsRef.current = null
+            socket.close()
+        }
+    }, [session])
+
+    useEffect(() => {
+        if (source !== 'web_camera' || connectionStatus !== 'connected') {
+            stopCamera()
+        }
+    }, [source, connectionStatus, stopCamera])
+
+    useEffect(() => () => stopCamera(), [stopCamera])
+
+    const startCamera = async () => {
+        setError(null)
+        try {
+            const mediaStream = await navigator.mediaDevices.getUserMedia({
+                video: {
+                    facingMode: 'environment',
+                    width: { ideal: 640 },
+                    height: { ideal: 480 },
+                },
+            })
+            streamRef.current = mediaStream
+            setStream(mediaStream)
+            if (videoRef.current) videoRef.current.srcObject = mediaStream
+        } catch {
+            setError('Kamera jest niedostępna lub odmówiono dostępu.')
+        }
+    }
+
+    useEffect(() => {
+        if (!stream || source !== 'web_camera') return undefined
 
         const interval = setInterval(() => {
-            if (!videoRef.current || !canvasRef.current) return;
+            const socket = wsRef.current
+            const video = videoRef.current
+            const canvas = canvasRef.current
+            if (encodingRef.current || !video || !canvas || socket?.readyState !== WebSocket.OPEN) return
+            if (!video.videoWidth || !video.videoHeight) return
 
-            const canvas = canvasRef.current;
-            const video = videoRef.current;
-            const context = canvas.getContext('2d');
-
-            canvas.width = video.videoWidth;
-            canvas.height = video.videoHeight;
-            context.drawImage(video, 0, 0, canvas.width, canvas.height);
-
+            encodingRef.current = true
+            canvas.width = 640
+            canvas.height = 480
+            canvas.getContext('2d').drawImage(video, 0, 0, 640, 480)
             canvas.toBlob((blob) => {
-                const websocket = wsRef.current;
-                if (blob && websocket?.readyState === WebSocket.OPEN) {
-                    websocket.send(blob);
+                try {
+                    if (blob && blob.size <= 200 * 1024 && socket.readyState === WebSocket.OPEN) {
+                        socket.send(blob)
+                    }
+                } finally {
+                    encodingRef.current = false
                 }
-            }, 'image/jpeg', 0.5);
-        }, 33); // 30 fps
+            }, 'image/jpeg', 0.7)
+        }, 100)
 
-        return () => clearInterval(interval);
-    }, [stream]);
+        return () => {
+            clearInterval(interval)
+            encodingRef.current = false
+        }
+    }, [stream, source])
+
+    const webCameraReady = peers.python && source === 'web_camera' && connectionStatus === 'connected'
+    const expiresAt = session ? new Date(session.expiresAt).toLocaleTimeString('pl-PL', { hour: '2-digit', minute: '2-digit' }) : '—'
 
     return (
         <main className="camera-page">
@@ -94,20 +165,33 @@ export const Camera = () => {
                 <div>
                     <span className="eyebrow">Transmisja obrazu</span>
                     <h1>Kamera sterująca</h1>
-                    <p>Przekaż obraz do systemu analizy gestów.</p>
+                    <p>Przekaż obraz do lokalnego systemu analizy gestów.</p>
                 </div>
-                <div
-                    className={`connection-status connection-status--${connectionStatus}`}
-                    role="status"
-                >
+                <div className={`connection-status connection-status--${connectionStatus}`} role="status">
                     <span className="connection-status__dot" aria-hidden="true" />
                     {connectionStatus === 'connected'
-                        ? 'WebSocket połączony'
+                        ? 'Serwer połączony'
                         : connectionStatus === 'connecting'
-                            ? 'Łączenie z WebSocket…'
-                            : 'WebSocket rozłączony'}
+                            ? 'Łączenie z serwerem…'
+                            : 'Serwer rozłączony'}
                 </div>
             </header>
+
+            <section className="session-panel" aria-label="Dane sesji">
+                <div>
+                    <span className="session-panel__label">Kod sesji</span>
+                    <strong className="session-panel__code">{session?.code || '…'}</strong>
+                    <span className="session-panel__expiry">Ważny do {expiresAt}</span>
+                </div>
+                <div className="session-panel__clients">
+                    <span className={peers.python ? 'client-state is-online' : 'client-state'}>
+                        <i /> Python {peers.python ? 'połączony' : 'oczekuje'}
+                    </span>
+                    <span className={peers.unity ? 'client-state is-online' : 'client-state'}>
+                        <i /> Unity {peers.unity ? 'połączone' : 'oczekuje'}
+                    </span>
+                </div>
+            </section>
 
             <section className="camera-workspace" aria-label="Panel kamery">
                 <aside className="camera-controls">
@@ -115,28 +199,35 @@ export const Camera = () => {
                         <span className="camera-controls__step">01</span>
                         <div>
                             <h2>Sterowanie</h2>
-                            <p>Włącz kamerę i ustaw dłoń w kadrze.</p>
+                            <p>Wpisz kod w Pythonie i wybierz tam źródło obrazu.</p>
                         </div>
                     </div>
 
-                    <div className="camera-controls__actions">
-                    {!stream ? (
-                        <button className="button button--primary" onClick={startCamera}>
-                            Uruchom kamerę
-                        </button>
-                    ) : (
-                        <button className="button button--danger" onClick={stopCamera}>
-                            Zatrzymaj kamerę
-                        </button>
-                    )}
+                    <div className="source-summary">
+                        <span>Wybrane źródło</span>
+                        <strong>
+                            {source === 'web_camera' ? 'Kamera webowa' : source === 'local_camera' ? 'Kamera lokalna' : 'Oczekiwanie na Python'}
+                        </strong>
                     </div>
 
-                    {error && (
-                        <p className="camera-error" role="alert">
-                            <span aria-hidden="true">!</span>
-                            {error}
+                    <div className="camera-controls__actions">
+                        {!stream ? (
+                            <button className="button button--primary" onClick={startCamera} disabled={!webCameraReady}>
+                                Uruchom kamerę
+                            </button>
+                        ) : (
+                            <button className="button button--danger" onClick={stopCamera}>Zatrzymaj kamerę</button>
+                        )}
+                    </div>
+
+                    {!webCameraReady && !error && (
+                        <p className="camera-notice">
+                            {source === 'local_camera'
+                                ? 'Obraz jest analizowany bezpośrednio z kamery przy aplikacji Python.'
+                                : 'Połącz aplikację Python i wybierz w niej kamerę webową.'}
                         </p>
                     )}
+                    {error && <p className="camera-error" role="alert"><span aria-hidden="true">!</span>{error}</p>}
 
                     <div className="camera-help">
                         <h3>Wskazówki</h3>
@@ -151,35 +242,23 @@ export const Camera = () => {
                 <div className={`camera-preview ${stream ? 'camera-preview--active' : ''}`}>
                     <div className="camera-preview__topbar">
                         <span>Podgląd na żywo</span>
-                        <span className={`camera-state ${stream ? 'camera-state--active' : ''}`}>
-                            {stream ? 'Aktywna' : 'Nieaktywna'}
-                        </span>
+                        <span className={`camera-state ${stream ? 'camera-state--active' : ''}`}>{stream ? 'Aktywna' : 'Nieaktywna'}</span>
                     </div>
                     <div className="camera-preview__viewport">
-                        <video
-                            ref={videoRef}
-                            autoPlay
-                            playsInline
-                            className={`camera-preview__video ${stream ? 'is-visible' : ''}`}
-                        />
+                        <video ref={videoRef} autoPlay playsInline className={`camera-preview__video ${stream ? 'is-visible' : ''}`} />
                         <canvas ref={canvasRef} className="visually-hidden-canvas" />
                         {!stream && (
                             <div className="camera-placeholder">
-                                <div className="camera-placeholder__icon" aria-hidden="true">
-                                    <span />
-                                </div>
+                                <div className="camera-placeholder__icon" aria-hidden="true"><span /></div>
                                 <h2>Kamera jest wyłączona</h2>
-                                <p>Uruchom kamerę, aby zobaczyć podgląd obrazu.</p>
+                                <p>{source === 'local_camera' ? 'Aktywna jest kamera lokalna aplikacji Python.' : 'Uruchom kamerę po sparowaniu aplikacji Python.'}</p>
                             </div>
                         )}
                     </div>
                 </div>
             </section>
 
-            <Link className="camera-back-link" to="/">
-                <span aria-hidden="true">←</span>
-                Powrót do strony głównej
-            </Link>
+            <Link className="camera-back-link" to="/"><span aria-hidden="true">←</span>Powrót do strony głównej</Link>
         </main>
     )
 }

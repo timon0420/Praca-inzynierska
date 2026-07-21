@@ -1,5 +1,6 @@
 import time
 import cv2
+import numpy as np
 import mediapipe as mp
 from mediapipe.tasks import python
 from mediapipe.tasks.python import vision
@@ -16,7 +17,7 @@ class Camera:
         (0, 17), (17, 18), (18, 19), (19, 20),
     ]
 
-    def __init__(self, qimage_class, cap):
+    def __init__(self, qimage_class, cap=None):
         self.QImage = qimage_class
         self.cap = cap
         self.calculator = HandPositionCalculator()
@@ -25,8 +26,9 @@ class Camera:
         self.hold_detection_seconds = 0.25
         self._last_timestamp_ms = -1
 
-        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
-        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
+        if self.cap is not None:
+            self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
+            self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
 
         options = vision.HandLandmarkerOptions(
             base_options=python.BaseOptions(model_asset_path="hand_landmarker.task"),
@@ -39,11 +41,27 @@ class Camera:
         self.detector = vision.HandLandmarker.create_from_options(options)
 
     def run_camera(self):
+        if self.cap is None:
+            return None, None
         ret, frame = self.cap.read()
         if not ret or frame is None:
             return None, None
 
-        frame = cv2.flip(frame, 1)
+        return self.process_frame(frame, mirror=True)
+
+    def process_jpeg(self, jpeg: bytes):
+        encoded = np.frombuffer(jpeg, dtype=np.uint8)
+        frame = cv2.imdecode(encoded, cv2.IMREAD_COLOR)
+        if frame is None:
+            return None, None
+        return self.process_frame(frame, mirror=False)
+
+    def process_frame(self, frame, mirror=False):
+        if frame is None:
+            return None, None
+
+        if mirror:
+            frame = cv2.flip(frame, 1)
         frame, tracking_data = self._hand_tracking(frame)
         rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         height, width, channels = rgb_frame.shape

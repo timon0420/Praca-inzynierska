@@ -74,6 +74,98 @@
   gap: 1.5rem;
 }
 
+.session-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  padding: 1.15rem 1.4rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: rgba(17, 26, 46, 0.9);
+}
+
+.session-panel > div:first-child {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+}
+
+.session-panel__label,
+.session-panel__expiry,
+.source-summary span {
+  color: var(--text-muted);
+  font-size: 0.74rem;
+}
+
+.session-panel__code {
+  color: #93c5fd;
+  font-size: 1.35rem;
+  letter-spacing: 0.12em;
+}
+
+.session-panel__clients {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.client-state {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(71, 85, 105, 0.16);
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.client-state i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #64748b;
+}
+
+.client-state.is-online {
+  color: #a7f3d0;
+}
+
+.client-state.is-online i {
+  background: var(--success);
+  box-shadow: 0 0 8px rgba(52, 211, 153, 0.7);
+}
+
+.source-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 1.3rem;
+  padding: 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: rgba(11, 17, 32, 0.42);
+}
+
+.source-summary strong {
+  color: #cbd5e1;
+  font-size: 0.84rem;
+}
+
+.camera-notice {
+  margin-bottom: 1.25rem;
+  padding: 0.85rem;
+  border: 1px solid rgba(96, 165, 250, 0.2);
+  border-radius: var(--radius-sm);
+  background: rgba(37, 99, 235, 0.09);
+  color: #bfdbfe;
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
 .camera-controls,
 .camera-preview {
   border: 1px solid var(--border);
@@ -327,6 +419,13 @@
   .connection-status {
     width: 100%;
     justify-content: center;
+  }
+
+  .session-panel,
+  .session-panel > div:first-child {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.7rem;
   }
 
   .camera-controls {
