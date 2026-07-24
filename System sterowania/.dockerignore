@@ -1,0 +1,7 @@
+env/
+legacy-desktop/
+tests/
+.vscode/
+__pycache__/
+**/__pycache__/
+*.pyc

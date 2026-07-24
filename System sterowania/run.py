@@ -1,10 +1,10 @@
-import sys
+"""Lokalny punkt startowy backendowego serwisu analizy obrazu."""
 
-from PyQt6.QtWidgets import QApplication
-from app.window import Window
+import os
+
+from backend.server import main
+
 
 if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    window = Window()
-    window.show()
-    sys.exit(app.exec())
+    os.environ.setdefault("INTERNAL_SERVICE_TOKEN", "local-development-token")
+    main()

@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Uruchom backend analizy",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "backend.server",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "INTERNAL_SERVICE_TOKEN": "local-development-token",
+                "PORT": "8090"
+            },
+            "console": "integratedTerminal"
+        }
+    ]
+}

@@ -15,7 +15,7 @@
             <ui:VisualElement class="card">
                 <ui:Label text="POŁĄCZ URZĄDZENIE" class="eyebrow" />
                 <ui:Label text="Wprowadź kod sesji" class="heading" />
-                <ui:Label text="Kod znajdziesz w aplikacji webowej lub w lokalnym systemie sterowania Python." class="description" />
+                <ui:Label text="Kod sesji znajdziesz w aplikacji webowej." class="description" />
 
                 <ui:Label text="KOD SESJI" class="field-label" />
                 <ui:TextField name="session-code" class="code-field" tooltip="Kod w formacie XXXX-XXXX" />

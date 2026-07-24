@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: manipulator-analysis
+    runtime: docker
+    plan: free
+    region: frankfurt
+    dockerContext: "./System sterowania"
+    dockerfilePath: "./System sterowania/Dockerfile.backend"
+    healthCheckPath: /healthz
+    envVars:
+      - key: INTERNAL_SERVICE_TOKEN
+        generateValue: true
+
+  - type: web
+    name: websocket-inzynierka
+    runtime: docker
+    plan: free
+    region: frankfurt
+    dockerContext: ./websocket
+    dockerfilePath: ./websocket/Dockerfile
+    healthCheckPath: /healthz
+    envVars:
+      - key: ANALYSIS_SERVICE_HOSTPORT
+        fromService:
+          type: web
+          name: manipulator-analysis
+          property: hostport
+      - key: INTERNAL_SERVICE_TOKEN
+        fromService:
+          type: web
+          name: manipulator-analysis
+          envVarKey: INTERNAL_SERVICE_TOKEN

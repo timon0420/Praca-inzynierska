@@ -1,7 +1,7 @@
 import unittest
 from types import SimpleNamespace
 
-from app.hand_position import HandPositionCalculator
+from backend.hand_position import HandPositionCalculator
 
 
 class HandPositionCalculatorTests(unittest.TestCase):
