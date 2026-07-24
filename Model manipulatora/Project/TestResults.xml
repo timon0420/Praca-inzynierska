@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="8" result="Passed" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-07-21 14:58:38Z" end-time="2026-07-21 14:58:38Z" duration="0,083909">
+  <test-suite type="TestSuite" id="1000" name="Project" fullname="Project" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-07-21 14:58:38Z" end-time="2026-07-21 14:58:38Z" duration="0.083909" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1012" name="Assembly-CSharp-Editor.dll" fullname="C:/Users/medel/Inżynierka/Model manipulatora/Project/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-07-21 14:58:38Z" end-time="2026-07-21 14:58:38Z" duration="0.070513" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="13308" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestFixture" id="1001" name="SessionConnectionTests" fullname="SessionConnectionTests" classname="SessionConnectionTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-07-21 14:58:38Z" end-time="2026-07-21 14:58:38Z" duration="0.068716" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1011" name="ApiErrorsHaveFriendlyMessages" fullname="SessionConnectionTests.ApiErrorsHaveFriendlyMessages" methodname="ApiErrorsHaveFriendlyMessages" classname="SessionConnectionTests" runstate="Runnable" seed="2052605538" result="Passed" start-time="2026-07-21 14:58:38Z" end-time="2026-07-21 14:58:38Z" duration="0.026108" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-suite type="ParameterizedMethod" id="1005" name="NormalizeSessionCodeFormatsInput" fullname="SessionConnectionTests.NormalizeSessionCodeFormatsInput" classname="SessionConnectionTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-07-21 14:58:38Z" end-time="2026-07-21 14:58:38Z" duration="0.010821" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-case id="1002" name="NormalizeSessionCodeFormatsInput(&quot;abcd1234&quot;,&quot;ABCD-1234&quot;)" fullname="SessionConnectionTests.NormalizeSessionCodeFormatsInput(&quot;abcd1234&quot;,&quot;ABCD-1234&quot;)" methodname="NormalizeSessionCodeFormatsInput" classname="SessionConnectionTests" runstate="Runnable" seed="1690125075" result="Passed" start-time="2026-07-21 14:58:38Z" end-time="2026-07-21 14:58:38Z" duration="0.006465" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1003" name="NormalizeSessionCodeFormatsInput(&quot;ABCD-1234&quot;,&quot;ABCD-1234&quot;)" fullname="SessionConnectionTests.NormalizeSessionCodeFormatsInput(&quot;ABCD-1234&quot;,&quot;ABCD-1234&quot;)" methodname="NormalizeSessionCodeFormatsInput" classname="SessionConnectionTests" runstate="Runnable" seed="330605663" result="Passed" start-time="2026-07-21 14:58:38Z" end-time="2026-07-21 14:58:38Z" duration="0.000241" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1004" name="NormalizeSessionCodeFormatsInput(&quot; abcd-1234 &quot;,&quot;ABCD-1234&quot;)" fullname="SessionConnectionTests.NormalizeSessionCodeFormatsInput(&quot; abcd-1234 &quot;,&quot;ABCD-1234&quot;)" methodname="NormalizeSessionCodeFormatsInput" classname="SessionConnectionTests" runstate="Runnable" seed="2051220704" result="Passed" start-time="2026-07-21 14:58:38Z" end-time="2026-07-21 14:58:38Z" duration="0.000135" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+        </test-suite>
+        <test-suite type="ParameterizedMethod" id="1010" name="SessionCodeValidationUsesCrockfordAlphabet" fullname="SessionConnectionTests.SessionCodeValidationUsesCrockfordAlphabet" classname="SessionConnectionTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-07-21 14:58:38Z" end-time="2026-07-21 14:58:38Z" duration="0.004279" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-case id="1006" name="SessionCodeValidationUsesCrockfordAlphabet(&quot;ABCD-1234&quot;,True)" fullname="SessionConnectionTests.SessionCodeValidationUsesCrockfordAlphabet(&quot;ABCD-1234&quot;,True)" methodname="SessionCodeValidationUsesCrockfordAlphabet" classname="SessionConnectionTests" runstate="Runnable" seed="276106263" result="Passed" start-time="2026-07-21 14:58:38Z" end-time="2026-07-21 14:58:38Z" duration="0.002556" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1007" name="SessionCodeValidationUsesCrockfordAlphabet(&quot;ABC&quot;,False)" fullname="SessionConnectionTests.SessionCodeValidationUsesCrockfordAlphabet(&quot;ABC&quot;,False)" methodname="SessionCodeValidationUsesCrockfordAlphabet" classname="SessionConnectionTests" runstate="Runnable" seed="7525036" result="Passed" start-time="2026-07-21 14:58:38Z" end-time="2026-07-21 14:58:38Z" duration="0.000148" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1008" name="SessionCodeValidationUsesCrockfordAlphabet(&quot;ABCI-1234&quot;,False)" fullname="SessionConnectionTests.SessionCodeValidationUsesCrockfordAlphabet(&quot;ABCI-1234&quot;,False)" methodname="SessionCodeValidationUsesCrockfordAlphabet" classname="SessionConnectionTests" runstate="Runnable" seed="1071479984" result="Passed" start-time="2026-07-21 14:58:38Z" end-time="2026-07-21 14:58:38Z" duration="0.000088" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1009" name="SessionCodeValidationUsesCrockfordAlphabet(&quot;ABCD-123!&quot;,False)" fullname="SessionConnectionTests.SessionCodeValidationUsesCrockfordAlphabet(&quot;ABCD-123!&quot;,False)" methodname="SessionCodeValidationUsesCrockfordAlphabet" classname="SessionConnectionTests" runstate="Runnable" seed="1682629097" result="Passed" start-time="2026-07-21 14:58:38Z" end-time="2026-07-21 14:58:38Z" duration="0.000130" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+            <output><![CDATA[Saving results to: C:/Users/medel/AppData/LocalLow/DefaultCompany/Project\TestResults.xml
+]]></output>
+          </test-case>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

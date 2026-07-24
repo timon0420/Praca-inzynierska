@@ -1,0 +1,66 @@
+:root {
+    --background: rgb(8, 15, 29);
+    --surface: rgb(19, 30, 50);
+    --surface-raised: rgb(25, 39, 63);
+    --border: rgb(47, 65, 93);
+    --text: rgb(241, 245, 249);
+    --muted: rgb(148, 163, 184);
+    --primary: rgb(37, 99, 235);
+    --primary-hover: rgb(59, 130, 246);
+    --success: rgb(52, 211, 153);
+    --danger: rgb(248, 113, 113);
+}
+
+.screen {
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+    width: 100%; height: 100%;
+    min-width: 640px; min-height: 520px;
+    background-color: var(--background);
+    color: var(--text);
+    overflow: hidden;
+}
+
+.ambient { position: absolute; width: 520px; height: 520px; border-radius: 260px; opacity: 0.12; background-color: var(--primary); }
+.ambient-left { left: -260px; top: 15%; }
+.ambient-right { right: -310px; bottom: -250px; }
+
+.topbar { position: absolute; left: 48px; right: 48px; top: 32px; height: 62px; flex-direction: row; align-items: center; }
+.brand-mark { width: 48px; height: 48px; margin-right: 14px; align-items: center; justify-content: center; border-radius: 12px; background-color: var(--primary); }
+.brand-mark .unity-label { color: white; font-size: 23px; -unity-font-style: bold; }
+.brand-title { color: var(--text); font-size: 16px; -unity-font-style: bold; letter-spacing: 1px; }
+.brand-subtitle { margin-top: 3px; color: var(--muted); font-size: 9px; letter-spacing: 1px; }
+
+.content { position: absolute; left: 0; right: 0; top: 100px; bottom: 55px; align-items: center; justify-content: center; padding: 20px; }
+.card { width: 520px; max-width: 90%; padding: 34px 38px; border-width: 1px; border-color: var(--border); border-radius: 18px; background-color: var(--surface); }
+.eyebrow { margin-bottom: 10px; color: rgb(96, 165, 250); font-size: 10px; -unity-font-style: bold; letter-spacing: 2px; }
+.heading { margin-bottom: 10px; color: var(--text); font-size: 30px; -unity-font-style: bold; }
+.description { margin-bottom: 25px; color: var(--muted); font-size: 13px; white-space: normal; }
+.field-label { margin-bottom: 7px; color: rgb(203, 213, 225); font-size: 10px; -unity-font-style: bold; letter-spacing: 1px; }
+.field-help { margin-top: 6px; margin-bottom: 19px; color: rgb(100, 116, 139); font-size: 10px; }
+
+.code-field, .server-field { height: 52px; border-width: 1px; border-color: var(--border); border-radius: 9px; background-color: rgb(10, 18, 33); }
+.code-field .unity-text-input { color: var(--text); font-size: 22px; -unity-font-style: bold; letter-spacing: 4px; padding-left: 16px; padding-right: 16px; }
+.server-field { height: 42px; }
+.server-field .unity-text-input { color: rgb(42, 55, 76); font-size: 12px; padding-left: 12px; }
+.code-field:focus, .server-field:focus { border-color: rgb(96, 165, 250); border-width: 2px; }
+
+.button { height: 48px; border-width: 0; border-radius: 9px; color: white; font-size: 12px; -unity-font-style: bold; letter-spacing: 1px; }
+.primary-button { background-color: var(--primary); }
+.primary-button:hover { background-color: var(--primary-hover); }
+.start-button { margin-top: 20px; background-color: rgb(5, 150, 105); }
+.start-button:hover { background-color: rgb(16, 185, 129); }
+.button:disabled { background-color: rgb(42, 55, 76); color: rgb(100, 116, 139); }
+.link-button { height: 32px; border-width: 0; background-color: rgba(0, 0, 0, 0); color: var(--muted); font-size: 10px; }
+.link-button:hover { color: var(--text); }
+.quit-button { margin-top: 5px; }
+
+.status-row { min-height: 34px; margin-top: 10px; flex-direction: row; align-items: center; justify-content: center; }
+.status-dot { width: 8px; height: 8px; margin-right: 8px; border-radius: 4px; background-color: rgb(100, 116, 139); }
+.status-connected { background-color: var(--success); }
+.status-failed { background-color: var(--danger); }
+.status-pairing, .status-connecting, .status-reconnecting { background-color: rgb(251, 191, 36); }
+.status-label { color: var(--muted); font-size: 11px; white-space: normal; }
+.advanced-panel { margin-top: 4px; padding: 14px; border-radius: 9px; background-color: rgb(13, 22, 39); }
+
+.footer { position: absolute; left: 48px; right: 48px; bottom: 24px; flex-direction: row; justify-content: space-between; color: rgb(71, 85, 105); font-size: 9px; }

@@ -1,0 +1,681 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.4/staging' branch; Version is '6000.4.2f1 (7a4c1aeef971) revision 8014874'; Using compiler version '194234433'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26200) Core' Language: 'pl' Physical Memory: 16149 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-medel" at "2026-07-21T14:52:31.0689639Z"
+Process architecture: x64
+Date: 2026-07-21T14:52:31Z
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.4.2f1\Editor\Unity.exe
+-batchmode
+-quit
+-projectPath
+C:\Users\medel\Inżynierka\Model manipulatora\Project
+-executeMethod
+SessionUiSetup.Build
+-logFile
+C:\Users\medel\Inżynierka\Model manipulatora\Project\session-ui-build.log
+Successfully changed project path to: C:\Users\medel\Inżynierka\Model manipulatora\Project
+C:/Users/medel/Inżynierka/Model manipulatora/Project
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Player connection [23232]  Target information:
+
+Player connection [23232]  * "[IP] 172.19.64.1 [Port] 55504 [Flags] 2 [Guid] 1158557241 [EditorId] 1158557241 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-4MMCCCJI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [23232]  * "[IP] 192.168.1.20 [Port] 55504 [Flags] 2 [Guid] 1158557241 [EditorId] 1158557241 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-4MMCCCJI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [23232] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [23232] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-12472" after 0.6 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.18.1'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-medel"
+[Licensing::IpcConnector] LicenseClient-medel channel disconnected successfully.
+[Licensing::IpcConnector] Channel LicenseClient-medel-6000.4.2 doesn't exist
+[Licensing::Module] Successfully launched the LicensingClient (PId: 32940)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-medel-6000.4.2" at "2026-07-21T14:52:35.5286526Z"
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              25267f348cff4947a314e38d10947017
+  Correlation Id:          ffda297a3e42c97a776b8c0bbde3fec1
+  External correlation Id: 1385060717671200387
+  Machine Id:              YdMSAX/8hHy/RxrfwcqsZte1K5w=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-medel-6000.4.2" (connect: 0.87s, validation: 0.22s, handshake: 4.82s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-medel-6000.4.2-notifications" at "2026-07-21T14:52:40.5707353Z"
+[Licensing::Module] Connected to LicensingClient (PId: 32940, launch time: 0.02, total connection time: 5.91s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 7972525388633-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.04
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 9.64s
+[Licensing::Module] Licensing is initialized (took 8.00s).
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Initialize engine version: 6000.4.2f1 (7a4c1aeef971)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.4.2f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/medel/Inżynierka/Model manipulatora/Project/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) Iris(R) Xe Graphics (ID=0x9a49)
+    Vendor:   Intel
+    VRAM:     8074 MB
+    Driver:   31.0.101.4502
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.4.2f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.4.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.4.2f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56472
+CodeReloadManager initialized
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.014035 seconds.
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.190 seconds
+Domain Reload Profiling: 2654ms
+	BeginReloadAssembly (476ms)
+		CreateAndSetChildDomain (23ms)
+	RebuildCommonClasses (153ms)
+	RebuildNativeTypeToScriptingClass (34ms)
+	initialDomainReloadingComplete (237ms)
+	LoadAllAssembliesAndSetupDomain (558ms)
+		LoadAssemblies (435ms)
+		AnalyzeDomain (532ms)
+			TypeCache.Refresh (526ms)
+				TypeCache.ScanAssembly (483ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (1195ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (240ms)
+			BeforeProcessingInitializeOnLoad (208ms)
+			ProcessInitializeOnLoadAttributes (263ms)
+			ProcessInitializeOnLoadMethodAttributes (289ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 62 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.collab-proxy@2.12.4 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.collab-proxy@0b1559bcd34e)
+    com.unity.inputsystem@1.19.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.inputsystem@21a28c3a6c83)
+    com.unity.timeline@1.8.12 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.timeline@8cd8509afae5)
+    com.unity.visualscripting@1.9.11 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.visualscripting@8bed5ad90189)
+    com.unity.ide.visualstudio@2.0.27 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.ide.visualstudio@dc1ddd4f09b6)
+    com.unity.ide.rider@3.0.39 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.ide.rider@4504839d03f7)
+    com.unity.editorcoroutines@1.0.1 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.editorcoroutines@54394ed3283c)
+    com.unity.performance.profile-analyzer@1.3.3 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.performance.profile-analyzer@10347e9ce886)
+    com.unity.testtools.codecoverage@1.3.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.testtools.codecoverage@19a841221620)
+    com.unity.searcher@4.9.4 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.searcher@d45a78918735)
+    com.unity.burst@1.8.29 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.burst@6bb9aca3ef38)
+    com.unity.mathematics@1.3.3 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.mathematics@19a9377c4ffa)
+    com.unity.settings-manager@2.1.1 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.settings-manager@0b8638c5ce86)
+    com.unity.nuget.mono-cecil@1.11.6 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.nuget.mono-cecil@ecb9724e46ff)
+    com.unity.test-framework.performance@3.4.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.test-framework.performance@aa81a99c4a75)
+  Built-in packages:
+    com.unity.feature.development@1.0.2 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.feature.development@767aadbc6eb7)
+    com.unity.multiplayer.center@1.0.1 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.multiplayer.center@f01f4ba8d00a)
+    com.unity.render-pipelines.high-definition@17.4.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.render-pipelines.high-definition@36bf9abcd60b)
+    com.unity.ugui@2.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.ugui@d8a2716f3013)
+    com.unity.modules.accessibility@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.accessibility)
+    com.unity.modules.adaptiveperformance@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.adaptiveperformance)
+    com.unity.modules.ai@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.ai)
+    com.unity.modules.androidjni@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.androidjni)
+    com.unity.modules.animation@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.animation)
+    com.unity.modules.assetbundle@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.assetbundle)
+    com.unity.modules.audio@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.cloth@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.cloth)
+    com.unity.modules.director@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.director)
+    com.unity.modules.imageconversion@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.physics2d@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.physics2d)
+    com.unity.modules.screencapture@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.terrain@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.terrain)
+    com.unity.modules.terrainphysics@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.terrainphysics)
+    com.unity.modules.tilemap@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.tilemap)
+    com.unity.modules.ui@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.uielements@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.uielements)
+    com.unity.modules.umbra@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.umbra)
+    com.unity.modules.unityanalytics@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.unityanalytics)
+    com.unity.modules.unitywebrequest@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.unitywebrequest)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.unitywebrequestaudio)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.unitywebrequesttexture)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.unitywebrequestwww)
+    com.unity.modules.vectorgraphics@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.vectorgraphics)
+    com.unity.modules.vehicles@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.vehicles)
+    com.unity.modules.video@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.video)
+    com.unity.modules.vr@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.vr)
+    com.unity.modules.wind@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.wind)
+    com.unity.modules.xr@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.xr)
+    com.unity.modules.subsystems@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.subsystems)
+    com.unity.modules.hierarchycore@1.0.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.modules.hierarchycore)
+    com.unity.render-pipelines.core@17.4.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.render-pipelines.core@9d79d0cd2cf7)
+    com.unity.shadergraph@17.4.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.shadergraph@34406da38d62)
+    com.unity.visualeffectgraph@17.4.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.visualeffectgraph@e00a147af410)
+    com.unity.render-pipelines.high-definition-config@17.4.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.render-pipelines.high-definition-config@f2a20abb2a1c)
+    com.unity.test-framework@1.6.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.test-framework@76560ee600cb)
+    com.unity.collections@6.4.0 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.collections@05d86f76b771)
+    com.unity.ext.nunit@2.0.5 (location: C:\Users\medel\Inżynierka\Model manipulatora\Project\Library\PackageCache\com.unity.ext.nunit@d8c07649098d)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.08 seconds
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+Starting: C:\Program Files\Unity\Hub\Editor\6000.4.2f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/medel/Inżynierka/Model manipulatora/Project
+DisplayProgressbar: Compiling Scripts
+Starting: C:\Program Files\Unity\Hub\Editor\6000.4.2f1\Editor\Data\netcorerun\netcorerun.exe "C:\Program Files\Unity\Hub\Editor\6000.4.2f1\Editor\Data\Tools\BuildPipeline\ScriptCompilationBuildProgram.exe" "Library/Bee/1900b0aE.dag.json" "Library/Bee/1900b0aE-inputdata.json" "Library\Bee\buildprogram0.traceevents"
+WorkingDir: C:/Users/medel/Inżynierka/Model manipulatora/Project
+ExitCode: 4 Duration: 14s
+Rebuilding DAG because FileSignature timestamp changed: Library/Bee/1900b0aE-inputdata.json
+[710/905    1s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[BUSY       7s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll (+2 others)
+[711/905   13s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll (+2 others)
+*** Tundra requires additional run (14.08 seconds), 2 items updated, 709 evaluated
+ExitCode: 0 Duration: 12s
+Starting: C:\Program Files\Unity\Hub\Editor\6000.4.2f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --dagfilejson="Library\Bee\1900b0aE.dag.json" --profile="Library/Bee/backend2.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/medel/Inżynierka/Model manipulatora/Project
+ExitCode: 0 Duration: 12s
+Finished compiling graph: 909 nodes, 16750 flattened edges (13920 ToBuild, 140 ToUse), maximum node priority 1003
+[500/905    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp
+[501/905    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.rsp
+[710/905    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[897/905    2s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll (+2 others)
+[898/905    1s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+Assets\Editor\SessionUiSetup.cs(76,9): warning CS0618: 'WebSocketClient' is obsolete: 'Use SessionConnection and RobotArmController instead.'
+
+Assets\Editor\SessionUiSetup.cs(76,63): warning CS0618: 'WebSocketClient' is obsolete: 'Use SessionConnection and RobotArmController instead.'
+
+Assets\Editor\SessionUiSetup.cs(76,34): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Editor\SessionUiSetup.cs(86,55): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Editor\SessionUiSetup.cs(104,13): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+[BUSY       7s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Assembly-CSharp.dll (+pdb)
+[899/905    6s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Assembly-CSharp-Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll, with 137 defines and 343 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[900/905    8s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Assembly-CSharp.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll, with 139 defines and 321 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[901/905    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+[902/905    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+[903/905    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
+[904/905    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
+*** Tundra build success (12.24 seconds), 11 items updated, 905 evaluated
+Assets\Editor\SessionUiSetup.cs(76,9): warning CS0618: 'WebSocketClient' is obsolete: 'Use SessionConnection and RobotArmController instead.'
+Assets\Editor\SessionUiSetup.cs(76,63): warning CS0618: 'WebSocketClient' is obsolete: 'Use SessionConnection and RobotArmController instead.'
+Assets\Editor\SessionUiSetup.cs(76,34): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Editor\SessionUiSetup.cs(86,55): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Editor\SessionUiSetup.cs(104,13): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+AssetDatabase: script compilation time: 40.165258s
+Begin MonoManager ReloadAssembly
+Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
+Assembly DocCodeExamples.dll at Library/ScriptAssemblies/DocCodeExamples.dll not valid. Loading of assembly skipped.
+Assembly TestNewCustomAssembly.dll at Library/ScriptAssemblies/TestNewCustomAssembly.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.BurstCompatibilityGen.dll at Library/ScriptAssemblies/Unity.Collections.BurstCompatibilityGen.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.DocCodeSamples.dll at Library/ScriptAssemblies/Unity.Collections.DocCodeSamples.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.PerformanceTests.dll at Library/ScriptAssemblies/Unity.Collections.PerformanceTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.dll at Library/ScriptAssemblies/Unity.Collections.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.Playmode.dll at Library/ScriptAssemblies/Unity.Collections.Tests.Playmode.dll not valid. Loading of assembly skipped.
+Assembly Unity.InputSystem.IntegrationTests.dll at Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Mathematics.Tests.dll at Library/ScriptAssemblies/Unity.Mathematics.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Nuget.Mono-Cecil.dll at Library/ScriptAssemblies/Unity.Nuget.Mono-Cecil.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Performance.Profile-Analyzer.EditorTests.dll at Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.HighDefinition.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.HighDefinition.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.HighDefinitionConfig.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinitionConfig.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Searcher.EditorTests.dll at Library/ScriptAssemblies/Unity.Searcher.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Settings.Tests.dll at Library/ScriptAssemblies/Unity.Settings.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.ShaderGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.ShaderGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TestTools.CodeCoverage.Editor.Compatibility.dll at Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.Compatibility.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Editor.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.UnifiedRayTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.UnifiedRayTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.VisualEffectGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.VisualEffectGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.VisualEffectGraph.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.Common.Tests.dll at Library/ScriptAssemblies/UnityEditor.UI.Common.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.UI.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
+Start importing Assets/Editor using Guid(105d9dbc6f1245c478080fa8f117693e) (DefaultImporter) -> (Import Result ID: '6b89b6926b248f3fa28ba11dd66187c1') in 0.1273631 seconds [static dependencies only]. Details - ImportResultOutputID=6f7e589222fb3042ed417a9ec7fe4f24 DependenciesID=a338c939e1861feefc0b46896c56cf94 StaticDependenciesID=28c6d19905cdb3dcc4f1abc5aa643743 
+Start importing Assets/UI using Guid(94cd2d7e0812cb3478b18dda947eedc3) (DefaultImporter) -> (Import Result ID: '4d0863a0b76c2b2e0872ced4ab30ef1d') in 0.0502985 seconds [static dependencies only]. Details - ImportResultOutputID=afd0332ef413d0423fab251f9eaf4c4f DependenciesID=38771a5c1ea43ed7d2050ee188e3ed7c StaticDependenciesID=95ba378267c2b63b22bc424ca4ed3adb 
+Refreshing native plugins compatible for Editor in 8.73 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 5.85 ms, found 4 plugins.
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  8.297 seconds
+Domain Reload Profiling: 11877ms
+	BeginReloadAssembly (768ms)
+		DisableScriptedObjects (113ms)
+		CreateAndSetChildDomain (217ms)
+	RebuildCommonClasses (111ms)
+	RebuildNativeTypeToScriptingClass (41ms)
+	initialDomainReloadingComplete (721ms)
+	LoadAllAssembliesAndSetupDomain (1937ms)
+		LoadAssemblies (1362ms)
+		AnalyzeDomain (882ms)
+			TypeCache.Refresh (679ms)
+				TypeCache.ScanAssembly (649ms)
+			BuildScriptInfoCaches (182ms)
+			ResolveRequiredComponents (17ms)
+	FinalizeReload (8298ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (68ms)
+			BeforeProcessingInitializeOnLoad (456ms)
+			ProcessInitializeOnLoadAttributes (5890ms)
+			ProcessInitializeOnLoadMethodAttributes (1376ms)
+			AfterProcessingInitializeOnLoad (26ms)
+		AwakeInstancesAfterBackupRestoration (39ms)
+Start importing Assets/UI/MainMenu.uss using Guid(5aacc21cdd3f3b640abca7909e4a0ebf) (ScriptedImporter)Unknown pseudo class "focus-within" in StyleSheet 
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Debug:LogWarningFormat (UnityEngine.Object,string,object[])
+UnityEngine.UIElements.StyleComplexSelector:CachePseudoStateMasks (UnityEngine.UIElements.StyleSheet)
+UnityEngine.UIElements.StyleSheet:SetupReferences ()
+UnityEngine.UIElements.StyleSheet:SetRules (UnityEngine.UIElements.StyleRule[])
+UnityEngine.UIElements.StyleSheets.StyleSheetBuilder:BuildTo (UnityEngine.UIElements.StyleSheet)
+UnityEditor.UIElements.StyleSheets.StyleSheetImporterImpl:ImportParserStyleSheet (UnityEngine.UIElements.StyleSheet,ExCSS.Stylesheet,System.Collections.Generic.List`1<ExCSS.TokenizerError>)
+UnityEditor.UIElements.StyleSheets.StyleSheetImporterImpl:Import (UnityEngine.UIElements.StyleSheet,string)
+UnityEditor.UIElements.StyleSheets.StyleSheetImporter:OnImportAsset (UnityEditor.AssetImporters.AssetImportContext)
+UnityEditor.AssetImporters.ScriptedImporter:GenerateAssetData (UnityEditor.AssetImporters.AssetImportContext)
+
+Unknown pseudo class "focus-within" in StyleSheet 
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Debug:LogWarningFormat (UnityEngine.Object,string,object[])
+UnityEngine.UIElements.StyleComplexSelector:CachePseudoStateMasks (UnityEngine.UIElements.StyleSheet)
+UnityEngine.UIElements.StyleSheet:SetupReferences ()
+UnityEngine.UIElements.StyleSheet:SetRules (UnityEngine.UIElements.StyleRule[])
+UnityEngine.UIElements.StyleSheets.StyleSheetBuilder:BuildTo (UnityEngine.UIElements.StyleSheet)
+UnityEditor.UIElements.StyleSheets.StyleSheetImporterImpl:ImportParserStyleSheet (UnityEngine.UIElements.StyleSheet,ExCSS.Stylesheet,System.Collections.Generic.List`1<ExCSS.TokenizerError>)
+UnityEditor.UIElements.StyleSheets.StyleSheetImporterImpl:Import (UnityEngine.UIElements.StyleSheet,string)
+UnityEditor.UIElements.StyleSheets.StyleSheetImporter:OnImportAsset (UnityEditor.AssetImporters.AssetImportContext)
+UnityEditor.AssetImporters.ScriptedImporter:GenerateAssetData (UnityEditor.AssetImporters.AssetImportContext)
+
+ -> (Import Result ID: 'd34bc35b006c0645982370a3d44cb842') in 0.2629715 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=81ba2bcf50426624c8c6ee19e3f45a23 DependenciesID=aa357da5f97892532a592326e0199732 StaticDependenciesID=07aa4dbd99f838ebbd8bffa008bead85 
+Start importing Assets/UI/ConnectionOverlay.uss using Guid(8d3c79b37e0f69d47bb961580cf7bcdd) (ScriptedImporter) -> (Import Result ID: '87fb60a613f12710e0ff0e74b1b1ccec') in 0.0359193 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c16c7a2f64abf67c430c7aa1dad1c93f DependenciesID=58d7cd589305794fc8f0e0d4b8910394 StaticDependenciesID=dc99753e1162ece54880b23c8ab280ad 
+Start importing Assets/UI/MainMenu.uxml using Guid(29f335353c566bb43ae5e72918ed8b39) (ScriptedImporter)Unknown pseudo class "focus-within" in StyleSheet MainMenu
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Debug:LogWarningFormat (UnityEngine.Object,string,object[])
+UnityEngine.UIElements.StyleComplexSelector:CachePseudoStateMasks (UnityEngine.UIElements.StyleSheet)
+UnityEngine.UIElements.StyleSheet:SetupReferences ()
+UnityEngine.UIElements.StyleSheet:OnEnable ()
+UnityEditor.AssetDatabase:LoadMainAssetAtPath (string)
+UnityEditor.UIElements.StyleSheets.StyleValueImporter:DeclareDependencyAndLoad (string,string)
+UnityEditor.UIElements.StyleSheets.StyleValueImporter:DeclareDependencyAndLoad (string)
+UnityEditor.UIElements.UXMLImporterImpl:ValidateAndLoadResource (System.Xml.Linq.XElement,UnityEngine.UIElements.VisualTreeAsset,string,bool)
+UnityEditor.UIElements.UXMLImporterImpl:LoadStyleReferenceNode (UnityEngine.UIElements.VisualElementAsset,System.Xml.Linq.XElement,UnityEngine.UIElements.VisualTreeAsset)
+UnityEditor.UIElements.UXMLImporterImpl:LoadXml (System.Xml.Linq.XElement,UnityEngine.UIElements.UxmlAsset,UnityEngine.UIElements.VisualTreeAsset,int,bool)
+UnityEditor.UIElements.UXMLImporterImpl:LoadXmlRoot (System.Xml.Linq.XDocument,UnityEngine.UIElements.VisualTreeAsset,bool)
+UnityEditor.UIElements.UXMLImporterImpl:ImportXml (string,UnityEngine.UIElements.VisualTreeAsset&)
+UnityEditor.UIElements.UXMLImporterImpl:Import (UnityEngine.UIElements.VisualTreeAsset&)
+UnityEditor.UIElements.UIElementsViewImporter:OnImportAsset (UnityEditor.AssetImporters.AssetImportContext)
+UnityEditor.AssetImporters.ScriptedImporter:GenerateAssetData (UnityEditor.AssetImporters.AssetImportContext)
+
+Unknown pseudo class "focus-within" in StyleSheet MainMenu
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Debug:LogWarningFormat (UnityEngine.Object,string,object[])
+UnityEngine.UIElements.StyleComplexSelector:CachePseudoStateMasks (UnityEngine.UIElements.StyleSheet)
+UnityEngine.UIElements.StyleSheet:SetupReferences ()
+UnityEngine.UIElements.StyleSheet:OnEnable ()
+UnityEditor.AssetDatabase:LoadMainAssetAtPath (string)
+UnityEditor.UIElements.StyleSheets.StyleValueImporter:DeclareDependencyAndLoad (string,string)
+UnityEditor.UIElements.StyleSheets.StyleValueImporter:DeclareDependencyAndLoad (string)
+UnityEditor.UIElements.UXMLImporterImpl:ValidateAndLoadResource (System.Xml.Linq.XElement,UnityEngine.UIElements.VisualTreeAsset,string,bool)
+UnityEditor.UIElements.UXMLImporterImpl:LoadStyleReferenceNode (UnityEngine.UIElements.VisualElementAsset,System.Xml.Linq.XElement,UnityEngine.UIElements.VisualTreeAsset)
+UnityEditor.UIElements.UXMLImporterImpl:LoadXml (System.Xml.Linq.XElement,UnityEngine.UIElements.UxmlAsset,UnityEngine.UIElements.VisualTreeAsset,int,bool)
+UnityEditor.UIElements.UXMLImporterImpl:LoadXmlRoot (System.Xml.Linq.XDocument,UnityEngine.UIElements.VisualTreeAsset,bool)
+UnityEditor.UIElements.UXMLImporterImpl:ImportXml (string,UnityEngine.UIElements.VisualTreeAsset&)
+UnityEditor.UIElements.UXMLImporterImpl:Import (UnityEngine.UIElements.VisualTreeAsset&)
+UnityEditor.UIElements.UIElementsViewImporter:OnImportAsset (UnityEditor.AssetImporters.AssetImportContext)
+UnityEditor.AssetImporters.ScriptedImporter:GenerateAssetData (UnityEditor.AssetImporters.AssetImportContext)
+
+ -> (Import Result ID: 'd8343fda5169a03b3984915391815a2c') in 0.0952066 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=74aeebc7a23f751ecc69934afa88b87e DependenciesID=cd28a64d127b398c0d5f39252af48c72 StaticDependenciesID=a66f5306f1866b54451bba9d1258a15d 
+Start importing Assets/UI/ConnectionOverlay.uxml using Guid(6cde150d953eba24dba9d60cb438ee09) (ScriptedImporter) -> (Import Result ID: 'a71bb674ce74bdd0b1a6f1f92ebf05f1') in 0.0360663 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7ed92c306ecb717375ef03b1de702de0 DependenciesID=60431649536bdb63b1201fbe69fa51fd StaticDependenciesID=bdbe1694f968e58325d22acafca76270 
+Unknown pseudo class "focus-within" in StyleSheet MainMenu
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Debug:LogWarningFormat (UnityEngine.Object,string,object[])
+UnityEngine.UIElements.StyleComplexSelector:CachePseudoStateMasks (UnityEngine.UIElements.StyleSheet)
+UnityEngine.UIElements.StyleSheet:SetupReferences ()
+UnityEngine.UIElements.StyleSheet:OnEnable ()
+UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
+UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.UIElements.VisualTreeAsset> (string)
+UnityEditor.RetainedMode/RetainedModeAssetPostprocessor:OnPostprocessAllAssets (string[],string[],string[],string[])
+System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+UnityEditor.AssetPostprocessingInternal:InvokeMethod (System.Reflection.MethodInfo,object[])
+UnityEditor.AssetPostprocessingInternal:PostprocessAllAssets (string[],string[],string[],string[],string[],bool)
+
+Unknown pseudo class "focus-within" in StyleSheet MainMenu
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Debug:LogWarningFormat (UnityEngine.Object,string,object[])
+UnityEngine.UIElements.StyleComplexSelector:CachePseudoStateMasks (UnityEngine.UIElements.StyleSheet)
+UnityEngine.UIElements.StyleSheet:SetupReferences ()
+UnityEngine.UIElements.StyleSheet:OnEnable ()
+UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
+UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.UIElements.VisualTreeAsset> (string)
+UnityEditor.RetainedMode/RetainedModeAssetPostprocessor:OnPostprocessAllAssets (string[],string[],string[],string[])
+System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+UnityEditor.AssetPostprocessingInternal:InvokeMethod (System.Reflection.MethodInfo,object[])
+UnityEditor.AssetPostprocessingInternal:PostprocessAllAssets (string[],string[],string[],string[],string[],bool)
+
+Refreshing native plugins compatible for Editor in 5.54 ms, found 4 plugins.
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=e45dab6c8d50efa43b42a728efa3dd56): Total: 56.120 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=6 (actual=6, local cache=0, cache server=0)
+		Asset DB Process Time: managed=9 ms, native=11069 ms
+		Asset DB Callback time: managed=988 ms, native=111 ms
+		Scripting: domain reloads=1, domain reload time=3605 ms, compile time=40168 ms, other=164 ms
+		Project Asset Count: scripts=1582, non-scripts=3188
+		Asset File Changes: new=12, changed=13, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 97.521ms
+	ApplyChangesToAssetFolders: 5.309ms
+	Scan: 607.121ms
+	OnSourceAssetsModified: 10.451ms
+	CategorizeScriptCompilationAssets: 289.896ms
+	ProcessAssetsWithTransientArtifactChanges: 175.624ms
+	CategorizeAssets: 152.044ms
+	CompileScripts: 40168.183ms
+	ImportOutOfDateAssets: 9342.098ms (8327.939ms without children)
+		ImportManagerImport: 1006.638ms (393.722ms without children)
+			UpdateCategorizedAssets: 0.173ms
+		ReloadNativeAssets: 0.061ms
+		UnloadImportedAssets: 2.334ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.260ms
+		OnDemandSchedulerStart: 3.852ms
+	PostProcessAllAssets: 984.631ms
+		XRBuildSystem.XRAssetImported 1.460ms
+		VersionControlSettings.HiddenFilePostprocess 1.143ms
+		PostProcessCallbackCreateDeferredMaterials 0.101ms
+		RaytracingShaderImportPostprocess 0.093ms
+		LocalizationDatabase.AssetDatabasePostprocessCallback 0.058ms
+		ShaderAssetModifiedCallback 0.051ms
+		MonoPostProcessAllAssets: 978.183ms
+			SyncVS.PostprocessSyncProject 350.792ms
+			AssetPostprocessor.OnPostprocessAllAssets 348.352ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 120.610ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 47.155ms
+			HDRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 33.591ms
+			MaterialPostprocessor.OnPostprocessAllAssets 10.517ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 7.889ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 7.620ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 6.952ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 4.900ms
+			AssetChangedListener.OnPostprocessAllAssets 3.091ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 2.694ms
+			VFXGraphPreprocessor.OnPostprocessAllAssets 2.178ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.984ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.893ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.847ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.802ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.648ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.644ms
+			AssetEvents.OnPostprocessAllAssets 0.641ms
+			PostProcessor.OnPostprocessAllAssets 0.607ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.574ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.537ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.511ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.460ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.433ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.268ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.243ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.197ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.169ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.096ms
+	PostAssetChangesProfiler: 13.649ms
+	UnloadStreamsBegin: 7.141ms
+	PersistCurrentRevisions: 0.945ms
+	GenerateScriptTypeHashes: 5.043ms
+	GenerateScriptTypeSerializationHashes: 9.608ms
+	Untracked: 4244.934ms
+
+Application.AssetDatabase Initial Refresh End
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Scanning for USB devices : 4.430ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Project
+Unloading 33 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7708 unused Assets / (4.1 MB). Loaded Objects now: 8821.
+Memory consumption went from 299.9 MB to 295.8 MB.
+Total: 36.061200 ms (FindLiveObjects: 1.783800 ms CreateObjectMapping: 6.342500 ms MarkObjects: 16.935500 ms  DeleteObjects: 10.987100 ms)
+
+Asset Pipeline Refresh (id=07670cfd97894e943929d5c30b63c7df): Total: 0.274 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Start importing Assets/UI Toolkit using Guid(c7ff4ca75a5c4d348bfad2a476a951dc) (DefaultImporter) -> (Import Result ID: 'd751e2e2dd8e5557fed26fb9dabc0424') in 0.023478 seconds [static dependencies only]. Details - ImportResultOutputID=65bf934ab9533e5d000b0ebef1c12adc DependenciesID=07a94dfc40c376fb99c6cd421cdfe3a5 StaticDependenciesID=0d0fc19598a8b8945340aad4579a143f 
+Start importing Assets/UI Toolkit/UnityThemes using Guid(e202ceec70c03764a86f050ffb0f03e3) (DefaultImporter) -> (Import Result ID: '895de6990eb56932559fd52a78e469bb') in 0.0220858 seconds [static dependencies only]. Details - ImportResultOutputID=1bb294bfce1fd2d99d9d056cbd61275a DependenciesID=e4c5a06363f4312a7b19c309a6574792 StaticDependenciesID=727033711180eb2542a978513a37bc26 
+Start importing Assets/UI Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss using Guid(e62c39701f290c84386ed4bd07a17ea9) (ScriptedImporter) -> (Import Result ID: '7fe3972ce95c9be35b6eccda69ff7de4') in 0.2074412 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5b2a013f1730edb5e2c92a1e5a639701 DependenciesID=d686af8c822743ceec3f947fbb4c8257 StaticDependenciesID=cc7b8ae76c33828eabc082e60b802c6f 
+Refreshing native plugins compatible for Editor in 8.15 ms, found 4 plugins.
+(Values over 0.050ms)
+Asset Pipeline Refresh (id=3fd92c5005df0924f893b2a26c0d0cea): Total: 0.553 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+	Summary:
+		Imports: total=3 (actual=3, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=518 ms
+		Asset DB Callback time: managed=12 ms, native=19 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1584, non-scripts=3189
+		Asset File Changes: new=3, changed=3, moved=0, deleted=0
+		Scan Filter Count: 0
+	ApplyChangesToAssetFolders: 0.202ms
+	Scan: 56.785ms
+	OnSourceAssetsModified: 1.498ms
+	ProcessAssetsWithTransientArtifactChanges: 0.087ms
+	CategorizeAssets: 136.486ms
+	ImportOutOfDateAssets: 273.112ms (1.125ms without children)
+		ImportManagerImport: 268.165ms (12.716ms without children)
+			UpdateCategorizedAssets: 0.116ms
+		ReloadNativeAssets: 0.070ms
+		UnloadImportedAssets: 0.676ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.398ms
+		OnDemandSchedulerStart: 1.658ms
+	PostProcessAllAssets: 22.169ms
+		XRBuildSystem.XRAssetImported 10.166ms
+		VersionControlSettings.HiddenFilePostprocess 0.417ms
+		MonoPostProcessAllAssets: 10.974ms
+			AssetPostprocessor.OnPostprocessAllAssets 5.161ms
+			SyncVS.PostprocessSyncProject 3.994ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.274ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.229ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.169ms
+			PostProcessor.OnPostprocessAllAssets 0.063ms
+			AssetChangedListener.OnPostprocessAllAssets 0.058ms
+	PostAssetChangesProfiler: 8.863ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.384ms
+	PersistCurrentRevisions: 0.898ms
+	Untracked: 52.332ms
+
+Start importing Assets/UI/SessionPanelSettings.asset using Guid(c7dc31728d272204a8ea947346c3d017) (NativeFormatImporter) -> (Import Result ID: '467512387743f705c8cadb86b7fbdb6e') in 0.0075787 seconds [static dependencies only]. Details - ImportResultOutputID=c01a88ecd586c172f1c62b909cc25ad3 DependenciesID=76f460174837899f2b0f6a5578cb0fa5 StaticDependenciesID=16fb362d7e4aefc95172ab64f2e2ad13 
+Refreshing native plugins compatible for Editor in 6.77 ms, found 4 plugins.
+Asset Pipeline Refresh (id=7e8ee4d00eb7d2842a0920f407d2e649): Total: 0.210 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[Licensing::Client] Successfully resolved entitlement details
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 12 unused Assets / (0.5 KB). Loaded Objects now: 8882.
+Memory consumption went from 267.9 MB to 267.9 MB.
+Total: 21.484500 ms (FindLiveObjects: 1.001800 ms CreateObjectMapping: 1.220600 ms MarkObjects: 19.200500 ms  DeleteObjects: 0.058900 ms)
+
+Unknown pseudo class "focus-within" in StyleSheet MainMenu
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Debug:LogWarningFormat (UnityEngine.Object,string,object[])
+UnityEngine.UIElements.StyleComplexSelector:CachePseudoStateMasks (UnityEngine.UIElements.StyleSheet)
+UnityEngine.UIElements.StyleSheet:SetupReferences ()
+UnityEngine.UIElements.StyleSheet:OnEnable ()
+UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
+UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.UIElements.VisualTreeAsset> (string)
+SessionUiSetup:CreateMenuScene (UnityEngine.UIElements.PanelSettings) (at Assets/Editor/SessionUiSetup.cs:65)
+SessionUiSetup:Build () (at Assets/Editor/SessionUiSetup.cs:27)
+
+(Filename: Assets/Editor/SessionUiSetup.cs Line: 65)
+
+Unknown pseudo class "focus-within" in StyleSheet MainMenu
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Debug:LogWarningFormat (UnityEngine.Object,string,object[])
+UnityEngine.UIElements.StyleComplexSelector:CachePseudoStateMasks (UnityEngine.UIElements.StyleSheet)
+UnityEngine.UIElements.StyleSheet:SetupReferences ()
+UnityEngine.UIElements.StyleSheet:OnEnable ()
+UnityEditor.AssetDatabase:LoadAssetAtPath (string,System.Type)
+UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.UIElements.VisualTreeAsset> (string)
+SessionUiSetup:CreateMenuScene (UnityEngine.UIElements.PanelSettings) (at Assets/Editor/SessionUiSetup.cs:65)
+SessionUiSetup:Build () (at Assets/Editor/SessionUiSetup.cs:27)
+
+(Filename: Assets/Editor/SessionUiSetup.cs Line: 65)
+
+Start importing Assets/UI/SessionPanelSettings.asset using Guid(c7dc31728d272204a8ea947346c3d017) (NativeFormatImporter) -> (Import Result ID: '881a7c085ffed1a45b9e74fe74eb83df') in 0.0075228 seconds [static dependencies only]. Details - ImportResultOutputID=c01a88ecd586c172f1c62b909cc25ad3 DependenciesID=2257fd87a7b3f6a4d0f7e373eb647fc1 StaticDependenciesID=2117827f7c91a41023e07dc14feaf2de 
+Refreshing native plugins compatible for Editor in 6.11 ms, found 4 plugins.
+Asset Pipeline Refresh (id=1114d1e4ed4630541b79bb228995ce09): Total: 0.215 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/MainMenuScene.unity using Guid(6d0c8b73bc2904c4ca328faf34f6099f) (DefaultImporter) -> (Import Result ID: '6327fc717692f12285a3a134fa5818be') in 0.0026074 seconds [static dependencies only]. Details - ImportResultOutputID=3e4b09b699545f684dcf7361fe30ef2f DependenciesID=569cf9d431445d15be57fc7c8c0f09b3 StaticDependenciesID=57abb5f6550e022265ce4d6816b60505 
+Refreshing native plugins compatible for Editor in 12.77 ms, found 4 plugins.
+Asset Pipeline Refresh (id=88e6df482c462b64c8d26637a6e8d079): Total: 0.281 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Opening scene 'Assets/OutdoorsScene.unity'
+Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/OutdoorsScene.unity'
+	Deserialize:            19.687 ms
+	Integration:            652.444 ms
+	Integration of assets:  0.326 ms
+	Thread Wait Time:       0.136 ms
+	Total Operation Time:   672.594 ms
+Unloading 175 unused Assets / (3.8 MB). Loaded Objects now: 8953.
+Memory consumption went from 340.8 MB to 336.9 MB.
+Total: 20.006800 ms (FindLiveObjects: 0.581100 ms CreateObjectMapping: 0.403300 ms MarkObjects: 17.693000 ms  DeleteObjects: 1.327600 ms)
+
+Start importing Assets/OutdoorsScene.unity using Guid(8124e5870f4fd4c779e7a5f994e84ad1) (DefaultImporter) -> (Import Result ID: 'd36dca23881a337d0b2b58d1055f5b6e') in 0.0233143 seconds [static dependencies only]. Details - ImportResultOutputID=cef842f74ecd9ca69a5284f82cc535ad DependenciesID=ffda04d0a37cdfa5f225ab9670b960f8 StaticDependenciesID=e9212b7e384aa8bebdd85a6456ca161a 
+Refreshing native plugins compatible for Editor in 7.50 ms, found 4 plugins.
+Asset Pipeline Refresh (id=81e27cfcc69bfd443a4ec3c692edb7db): Total: 0.187 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing ProjectSettings/EditorBuildSettings.asset using Guid(0000000000000000b000000000000000) (LibraryAssetImporter) -> (Import Result ID: 'f17f70209742074ffd467898f25fcd20') in 0.0079638 seconds [static dependencies only]. Details - ImportResultOutputID=d777934f36c664454d62eda103573334 DependenciesID=b6cda71681d610c74763b89936252554 StaticDependenciesID=c7fa48b7e4b5a6c1ff983565ed57d285 
+Refreshing native plugins compatible for Editor in 6.09 ms, found 4 plugins.
+Asset Pipeline Refresh (id=67c7bf92eaef2634694ae81303d30044): Total: 0.158 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Session UI scenes and build settings created successfully.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+SessionUiSetup:Build () (at Assets/Editor/SessionUiSetup.cs:35)
+
+(Filename: Assets/Editor/SessionUiSetup.cs Line: 35)
+
+Batchmode quit successfully invoked - shutting down!
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-medel-6000.4.2-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-medel-6000.4.2 channel disconnected successfully.
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+Exiting batchmode successfully now!
+Exiting without the bug reporter. Application will terminate with return code 0

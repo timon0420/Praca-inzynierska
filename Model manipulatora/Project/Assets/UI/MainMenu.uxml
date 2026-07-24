@@ -1,0 +1,46 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <Style src="project://database/Assets/UI/MainMenu.uss" />
+    <ui:VisualElement name="screen" class="screen">
+        <ui:VisualElement class="ambient ambient-left" />
+        <ui:VisualElement class="ambient ambient-right" />
+        <ui:VisualElement class="topbar">
+            <ui:VisualElement class="brand-mark"><ui:Label text="M" /></ui:VisualElement>
+            <ui:VisualElement>
+                <ui:Label text="MANIPULATOR CONTROL" class="brand-title" />
+                <ui:Label text="SYSTEM STEROWANIA W CZASIE RZECZYWISTYM" class="brand-subtitle" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:VisualElement class="content">
+            <ui:VisualElement class="card">
+                <ui:Label text="POŁĄCZ URZĄDZENIE" class="eyebrow" />
+                <ui:Label text="Wprowadź kod sesji" class="heading" />
+                <ui:Label text="Kod znajdziesz w aplikacji webowej lub w lokalnym systemie sterowania Python." class="description" />
+
+                <ui:Label text="KOD SESJI" class="field-label" />
+                <ui:TextField name="session-code" class="code-field" tooltip="Kod w formacie XXXX-XXXX" />
+                <ui:Label text="Format: XXXX-XXXX  •  Kod jest ważny przez 15 minut" class="field-help" />
+
+                <ui:Button name="connect-button" text="POŁĄCZ Z SESJĄ" class="button primary-button" />
+                <ui:VisualElement class="status-row">
+                    <ui:VisualElement name="status-dot" class="status-dot status-disconnected" />
+                    <ui:Label name="status-label" text="Wpisz kod sesji" class="status-label" />
+                </ui:VisualElement>
+
+                <ui:Button name="advanced-button" text="USTAWIENIA ZAAWANSOWANE  ▾" class="link-button" />
+                <ui:VisualElement name="advanced-panel" class="advanced-panel">
+                    <ui:Label text="ADRES SERWERA" class="field-label" />
+                    <ui:TextField name="server-url" class="server-field" />
+                </ui:VisualElement>
+
+                <ui:Button name="start-button" text="ROZPOCZNIJ" class="button start-button" />
+                <ui:Button name="quit-button" text="ZAKOŃCZ APLIKACJĘ" class="link-button quit-button" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:VisualElement class="footer">
+            <ui:Label text="Połączenie szyfrowane" />
+            <ui:Label text="Wersja 1.0" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

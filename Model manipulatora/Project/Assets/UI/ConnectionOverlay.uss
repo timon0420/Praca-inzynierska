@@ -1,0 +1,9 @@
+.game-ui { position: absolute; left: 0; right: 0; top: 0; bottom: 0; width: 100%; height: 100%; }
+.connection-badge { position: absolute; right: 24px; top: 22px; padding: 8px 13px; border-radius: 14px; background-color: rgba(120, 53, 15, 0.92); color: rgb(253, 230, 138); font-size: 10px; -unity-font-style: bold; }
+.connection-badge.badge-online { background-color: rgba(6, 78, 59, 0.92); color: rgb(167, 243, 208); }
+.reconnect-overlay { position: absolute; left: 0; right: 0; top: 0; bottom: 0; align-items: center; justify-content: center; background-color: rgba(3, 7, 18, 0.88); }
+.overlay-card { width: 430px; max-width: 88%; padding: 34px; align-items: center; border-width: 1px; border-color: rgb(51, 65, 85); border-radius: 16px; background-color: rgb(17, 28, 47); }
+.spinner { width: 42px; height: 42px; margin-bottom: 20px; border-width: 4px; border-color: rgb(37, 99, 235); border-top-color: rgba(37, 99, 235, 0.2); border-radius: 21px; }
+.overlay-title { margin-bottom: 8px; color: rgb(241, 245, 249); font-size: 20px; -unity-font-style: bold; }
+.overlay-message { margin-bottom: 22px; color: rgb(148, 163, 184); font-size: 12px; white-space: normal; -unity-text-align: middle-center; }
+.return-button { width: 190px; height: 42px; border-width: 0; border-radius: 8px; background-color: rgb(37, 99, 235); color: white; -unity-font-style: bold; }

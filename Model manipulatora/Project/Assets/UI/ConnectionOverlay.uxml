@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <Style src="project://database/Assets/UI/ConnectionOverlay.uss" />
+    <ui:VisualElement class="game-ui">
+        <ui:Label name="connection-badge" text="PONOWNE ŁĄCZENIE" class="connection-badge" />
+        <ui:VisualElement name="reconnect-overlay" class="reconnect-overlay">
+            <ui:VisualElement class="overlay-card">
+                <ui:VisualElement class="spinner" />
+                <ui:Label text="Połączenie zostało przerwane" class="overlay-title" />
+                <ui:Label name="reconnect-message" text="Ponowne łączenie…" class="overlay-message" />
+                <ui:Button name="return-menu-button" text="WRÓĆ DO MENU" class="return-button" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
